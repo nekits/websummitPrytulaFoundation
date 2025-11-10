@@ -21,6 +21,14 @@
         Our mission is to protect Ukrainian and European security through the supply of modern
         technologies and the implementation of effective solutions.
       </p>
+      <div class="button-container">
+        <a href="https://buy.stripe.com/00w14ofoG4iKfn65MRao804" class="btn btn-stripe" target="_blank" rel="noopener noreferrer">
+          Stripe
+        </a>
+        <a href="https://send.monobank.ua/jar/SvfRBKf7a" class="btn btn-mono" target="_blank" rel="noopener noreferrer">
+          Mono
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -62,9 +70,62 @@
     font-weight: var(--font-bold);
   }
 
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    min-width: 140px;
+  }
+
+  .btn-stripe {
+    background: linear-gradient(135deg, #635BFF 0%, #7A73FF 100%);
+    color: white;
+    box-shadow: 0 4px 14px rgba(99, 91, 255, 0.4);
+  }
+
+  .btn-stripe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(99, 91, 255, 0.6);
+  }
+
+  .btn-mono {
+    background: #000000;
+    color: white;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-mono:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    background: #1a1a1a;
+  }
+
   @media (max-width: 768px) {
     .about-section {
       padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .button-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 100%;
+      max-width: 300px;
     }
   }
 </style>

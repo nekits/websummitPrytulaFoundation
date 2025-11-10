@@ -2,39 +2,15 @@
 // VideosContacts.astro
 ---
 
-<section class="videos-section">
-  <div class="container">
-    <h2 class="section-title">VIDEOS</h2>
-    <div class="content">
-      <div class="videos-grid">
-        <div class="video-placeholder">
-          <div class="placeholder-text">Serhiy's interview for BBC</div>
-          <div class="placeholder-note">Video will be added soon</div>
-        </div>
-
-        <div class="video-placeholder">
-          <div class="placeholder-text">Shahed strike impact footage</div>
-          <div class="placeholder-note">Video will be added soon</div>
-        </div>
-
-        <div class="video-placeholder">
-          <div class="placeholder-text">Humanitarian projects overview</div>
-          <div class="placeholder-note">Video will be added soon</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="contacts-section">
   <div class="container">
     <h2 class="section-title">CONTACTS</h2>
     <div class="content">
       <div class="contact-item">
-        <div class="contact-label">WEBSITE</div>
-        <a href="https://prytulafoundation.org/en" class="contact-link" target="_blank" rel="noopener">
-          prytulafoundation.org/en
-        </a>
+        <div class="contact-label">CONTACT PERSON</div>
+        <div class="contact-link-text">
+          Marina Radynska
+        </div>
       </div>
 
       <div class="contact-item">
@@ -55,22 +31,6 @@
 </section>
 
 <style>
-  /* Videos Section */
-  .videos-section {
-    background: var(--bg-white);
-    padding: var(--section-padding-y) var(--section-padding-x);
-    color: var(--text-black);
-  }
-
-  .videos-section .container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
   .section-title {
     font-size: var(--text-section-lg);
     font-weight: var(--font-black);
@@ -83,41 +43,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--paragraph-gap);
-  }
-
-  .videos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .video-placeholder {
-    aspect-ratio: 16 / 9;
-    background: var(--bg-gray-light);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem;
-    border: 1px solid var(--color-black);
-    border-radius: var(--radius-lg);
-  }
-
-  .placeholder-text {
-    font-size: var(--text-body);
-    font-weight: var(--font-black);
-    line-height: var(--leading-body);
-    letter-spacing: var(--tracking-body);
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .placeholder-note {
-    font-size: var(--text-body-sm);
-    line-height: 1.5;
-    letter-spacing: var(--tracking-body);
-    color: var(--text-gray);
-    text-align: center;
   }
 
   /* Contacts Section */
@@ -157,7 +82,8 @@
     color: var(--text-gray);
   }
 
-  .contact-link {
+  .contact-link,
+  .contact-link-text {
     font-size: var(--text-body-lg);
     font-weight: var(--font-black);
     line-height: var(--leading-body);
@@ -172,22 +98,13 @@
   }
 
   @media (max-width: 768px) {
-    .videos-section {
-      padding: var(--section-padding-y-mobile) var(--section-padding-x);
-    }
-
     .contacts-section {
       padding: var(--section-padding-y-mobile) var(--section-padding-x);
     }
 
-    .videos-section .container,
     .contacts-section .container {
       grid-template-columns: 1fr;
       gap: 2rem;
-    }
-
-    .videos-grid {
-      grid-template-columns: 1fr;
     }
   }
 </style>
