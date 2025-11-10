@@ -59,11 +59,11 @@
   }
 
   .section-title {
-    font-size: var(--text-section-title);
-    font-weight: var(--font-bold);
-    line-height: var(--leading-tight);
+    font-size: var(--text-section-lg);
+    font-weight: var(--font-black);
+    line-height: var(--leading-section-lg);
     text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
+    letter-spacing: var(--tracking-section-lg);
   }
 
   .content {
@@ -83,25 +83,28 @@
   }
 
   .story-title {
-    font-size: 1.5rem;
-    font-weight: var(--font-bold);
+    font-size: var(--text-heading-sm);
+    font-weight: var(--font-black);
+    line-height: var(--leading-heading-sm);
+    letter-spacing: var(--tracking-heading-sm);
     margin-bottom: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
   }
 
   .story-meta {
-    font-size: 0.875rem;
-    font-weight: var(--font-bold);
+    font-size: var(--text-body-sm);
+    font-weight: var(--font-black);
+    line-height: 1.5;
+    letter-spacing: var(--tracking-body);
     color: var(--text-gray);
     margin-bottom: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
 
   .story-text {
-    font-size: var(--text-body-large);
-    line-height: var(--leading-relaxed);
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
     color: var(--text-gray);
     margin-bottom: var(--paragraph-gap);
   }
@@ -123,14 +126,6 @@
     .container {
       grid-template-columns: 1fr;
       gap: 2rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-    }
-
-    .story-title {
-      font-size: 1.25rem;
     }
   }
 </style>

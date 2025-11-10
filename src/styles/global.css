@@ -1,52 +1,125 @@
 @import "tailwindcss";
 
-/* Design System Variables - Based on Desktop.png and Mobile.png */
+/* Design System Variables - Based on Figma Design */
 :root {
-  /* Brand Colors from Mockup */
-  --color-blue: #0047FF;
+  /* Brand Colors from Figma */
+  --color-blue: #5CADFF;
   --color-yellow: #FFD600;
   --color-black: #000000;
   --color-white: #FFFFFF;
+  --color-gray: #D9D9D9;
+  --color-gray-light: #F8F8F8;
+  --color-neutral-100: #E5E5E5;
 
   /* Background Colors */
   --bg-white: #FFFFFF;
-  --bg-blue: #0047FF;
+  --bg-blue: #5CADFF;
   --bg-yellow: #FFD600;
-  --bg-gray-light: #F5F5F5;
+  --bg-gray: #D9D9D9;
+  --bg-gray-light: #F8F8F8;
+  --bg-neutral: #E5E5E5;
 
   /* Text Colors */
   --text-black: #000000;
   --text-white: #FFFFFF;
   --text-gray: #666666;
 
-  /* Typography */
+  /* Typography - Font Family */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --text-hero: 5rem;              /* 80px - Hero title */
-  --text-section-title: 2.5rem;   /* 40px - Section headings */
-  --text-body: 1rem;              /* 16px - Body text */
-  --text-body-large: 1.125rem;    /* 18px - Larger body */
+
+  /* Font Weights */
   --font-regular: 400;
   --font-bold: 700;
   --font-black: 900;
+
+  /* Font Sizes from Figma */
+  --text-hero: 10rem;              /* 160px - Main hero title */
+  --text-hero-mobile: 3rem;        /* 48px - Mobile hero */
+  --text-section-xl: 6.875rem;     /* 110px - Large section titles */
+  --text-section-lg: 5rem;         /* 80px - Medium section titles */
+  --text-section-md: 2.875rem;     /* 46px - Small section titles */
+  --text-heading-lg: 2.75rem;      /* 44px - Large headings */
+  --text-heading-md: 2.5rem;       /* 40px - Medium headings */
+  --text-heading-sm: 2rem;         /* 32px - Small headings */
+  --text-heading-xs: 1.875rem;     /* 30px - XS headings */
+  --text-body-lg: 1.25rem;         /* 20px - Large body */
+  --text-body: 1.1875rem;          /* 19px - Regular body */
+  --text-body-sm: 1rem;            /* 16px - Small body */
+
+  /* Line Heights from Figma */
+  --leading-hero: 0.78125;         /* 125/160 - Hero */
+  --leading-section-xl: 0.818;     /* 90/110 - Section XL */
+  --leading-section-lg: 0.825;     /* 66/80 - Section LG */
+  --leading-section-md: 1;         /* 46/46 - Section MD */
+  --leading-heading-lg: 1.023;     /* 45/44 - Heading LG */
+  --leading-heading-md: 1.2;       /* 48/40 - Heading MD */
+  --leading-heading-sm: 0.656;     /* 21/32 - Heading SM */
+  --leading-heading-xs: 1.2;       /* 36/30 - Heading XS */
+  --leading-body: 1.3;             /* 26/20 - Body */
+  --leading-body-nav: 1.105;       /* 21/19 - Navigation */
+
+  /* Legacy line-height values for backward compatibility */
   --leading-tight: 1.1;
   --leading-normal: 1.5;
   --leading-relaxed: 1.7;
+
+  /* Letter Spacing from Figma (всі -0.04em) */
+  --tracking-hero: -0.04em;        /* -6.4px / 160px */
+  --tracking-section-xl: -0.04em;  /* -4.4px / 110px */
+  --tracking-section-lg: -0.04em;  /* -3.2px / 80px */
+  --tracking-section-md: -0.04em;  /* -1.84px / 46px */
+  --tracking-heading-lg: -0.04em;  /* -1.76px / 44px */
+  --tracking-heading-md: -0.04em;  /* -1.6px / 40px */
+  --tracking-heading-sm: -0.04em;  /* -1.28px / 32px */
+  --tracking-heading-xs: -0.04em;  /* -1.2px / 30px */
+  --tracking-body: -0.04em;        /* -0.8px / 20px */
+  --tracking-body-nav: -0.04em;    /* -0.76px / 19px */
+
+  /* Legacy tracking values for backward compatibility */
   --tracking-tight: -0.02em;
   --tracking-normal: 0;
   --tracking-wide: 0.05em;
 
   /* Spacing */
-  --section-padding-y: 6rem;
-  --section-padding-y-mobile: 3rem;
-  --section-padding-x: 2rem;
-  --content-gap: 2rem;
-  --content-gap-large: 3rem;
-  --paragraph-gap: 1rem;
+  --section-padding-y: 6.25rem;       /* ~100px */
+  --section-padding-y-large: 12.5rem; /* ~200px */
+  --section-padding-y-mobile: 3rem;   /* 48px */
+  --section-padding-x: 2rem;          /* 32px */
+  --section-padding-x-desktop: 4rem;  /* 64px desktop */
+  --content-gap: 2rem;                /* 32px */
+  --content-gap-large: 4rem;          /* 64px */
+  --paragraph-gap: 1rem;              /* 16px */
 
   /* Container */
-  --container-max: 1200px;
+  --container-max: 1920px;          /* Full design width from Figma */
+  --container-content: 1280px;      /* Content max width */
   --container-text: 800px;
   --container-full: 100%;
+
+  /* Border Radius */
+  --radius-lg: 33px;                /* Large radius from Figma */
+  --radius-md: 20px;                /* Medium radius */
+  --radius-sm: 10px;                /* Small radius */
+}
+
+/* Mobile Typography Adjustments */
+@media (max-width: 768px) {
+  :root {
+    --text-hero: 3.75rem;           /* 60px замість 160px */
+    --text-section-xl: 3.4375rem;   /* 55px замість 110px */
+    --text-section-lg: 2.5rem;      /* 40px замість 80px */
+    --text-section-md: 2rem;        /* 32px замість 46px */
+    --text-heading-lg: 1.75rem;     /* 28px замість 44px */
+    --text-heading-md: 1.5rem;      /* 24px замість 40px */
+    --text-heading-sm: 1.375rem;    /* 22px замість 32px */
+    --text-body-lg: 1.125rem;       /* 18px замість 20px */
+    --text-body: 1rem;              /* 16px замість 19px */
+
+    --section-padding-y: 3rem;      /* 48px замість 100px */
+    --section-padding-x: 1.5rem;    /* 24px замість 32px */
+    --content-gap: 1.5rem;          /* 24px замість 32px */
+    --content-gap-large: 2.5rem;    /* 40px замість 64px */
+  }
 }
 
 /* Base Styles */
