@@ -53,7 +53,7 @@
   --leading-section-md: 1;         /* 46/46 - Section MD */
   --leading-heading-lg: 1.023;     /* 45/44 - Heading LG */
   --leading-heading-md: 1.2;       /* 48/40 - Heading MD */
-  --leading-heading-sm: 0.656;     /* 21/32 - Heading SM */
+  --leading-heading-sm: 0.8;       /* 21/32 - Heading SM */
   --leading-heading-xs: 1.2;       /* 36/30 - Heading XS */
   --leading-body: 1.3;             /* 26/20 - Body */
   --leading-body-nav: 1.105;       /* 21/19 - Navigation */
