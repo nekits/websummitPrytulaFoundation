@@ -53,11 +53,11 @@
   }
 
   .section-title {
-    font-size: var(--text-section-title);
-    font-weight: var(--font-bold);
-    line-height: var(--leading-tight);
+    font-size: var(--text-section-lg);
+    font-weight: var(--font-black);
+    line-height: var(--leading-section-lg);
     text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
+    letter-spacing: var(--tracking-section-lg);
   }
 
   .content {
@@ -70,18 +70,21 @@
     display: inline-block;
     background: var(--bg-blue);
     color: var(--text-white);
-    font-size: 0.875rem;
-    font-weight: var(--font-bold);
+    font-size: var(--text-body-sm);
+    font-weight: var(--font-black);
+    line-height: 1.5;
+    letter-spacing: var(--tracking-body);
     padding: 0.5rem 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
     margin-bottom: 1rem;
     align-self: flex-start;
+    border-radius: var(--radius-lg);
   }
 
   .text-block {
-    font-size: var(--text-body-large);
-    line-height: var(--leading-normal);
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
   }
 
   .text-block strong {
@@ -100,9 +103,10 @@
   }
 
   .stat-value {
-    font-size: 2.5rem;
-    font-weight: var(--font-bold);
-    line-height: 1;
+    font-size: var(--text-heading-md);
+    font-weight: var(--font-black);
+    line-height: var(--leading-heading-md);
+    letter-spacing: var(--tracking-heading-md);
     color: var(--color-blue);
   }
 
@@ -114,8 +118,10 @@
 
   .usa-link {
     display: inline-block;
-    font-size: var(--text-body-large);
-    font-weight: var(--font-bold);
+    font-size: var(--text-body-lg);
+    font-weight: var(--font-black);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
     color: var(--color-blue);
     text-decoration: none;
     margin-top: 1rem;
@@ -136,17 +142,9 @@
       gap: 2rem;
     }
 
-    .section-title {
-      font-size: 2rem;
-    }
-
     .stats-row {
       flex-direction: column;
       gap: 1.5rem;
-    }
-
-    .stat-value {
-      font-size: 2rem;
     }
   }
 </style>

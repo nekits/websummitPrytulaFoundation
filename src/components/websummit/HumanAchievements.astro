@@ -80,11 +80,11 @@
   }
 
   .section-title {
-    font-size: var(--text-section-title);
-    font-weight: var(--font-bold);
-    line-height: var(--leading-tight);
+    font-size: var(--text-section-lg);
+    font-weight: var(--font-black);
+    line-height: var(--leading-section-lg);
     text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
+    letter-spacing: var(--tracking-section-lg);
   }
 
   .content {
@@ -94,23 +94,28 @@
   }
 
   .intro-text {
-    font-size: var(--text-body-large);
-    line-height: var(--leading-normal);
+    font-size: var(--text-body-lg);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
     margin-bottom: 1rem;
   }
 
   .stat-highlight {
     background: var(--bg-white);
     padding: 1.5rem;
-    font-size: 1.5rem;
-    font-weight: var(--font-bold);
+    font-size: var(--text-heading-md);
+    font-weight: var(--font-black);
+    line-height: var(--leading-heading-md);
+    letter-spacing: var(--tracking-heading-md);
     text-align: center;
     margin-bottom: 1rem;
   }
 
   .subsection-title {
-    font-size: 1.125rem;
-    font-weight: var(--font-bold);
+    font-size: var(--text-heading-sm);
+    font-weight: var(--font-black);
+    line-height: var(--leading-heading-sm);
+    letter-spacing: var(--tracking-heading-sm);
     text-transform: uppercase;
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -129,16 +134,18 @@
   }
 
   .area-title {
-    font-size: 1.125rem;
-    font-weight: var(--font-bold);
+    font-size: var(--text-heading-xs);
+    font-weight: var(--font-black);
+    line-height: var(--leading-heading-xs);
+    letter-spacing: var(--tracking-heading-xs);
     margin-bottom: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.02em;
   }
 
   .area-text {
     font-size: var(--text-body);
-    line-height: var(--leading-relaxed);
+    line-height: var(--leading-body);
+    letter-spacing: var(--tracking-body);
     color: var(--text-gray);
   }
 
@@ -150,14 +157,6 @@
     .container {
       grid-template-columns: 1fr;
       gap: 2rem;
-    }
-
-    .section-title {
-      font-size: 2rem;
-    }
-
-    .stat-highlight {
-      font-size: 1.25rem;
     }
   }
 </style>
