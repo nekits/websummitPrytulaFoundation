@@ -4,6 +4,11 @@
 
 <section class="hero-section">
   <div class="hero-container">
+    <!-- Logo Header -->
+    <div class="hero-logo">
+      <img src="/images/logo.svg" alt="Prytula Foundation Logo" class="logo-img" />
+    </div>
+
     <!-- Title with decorative underline -->
     <div class="hero-title-wrapper">
       <h1 class="hero-title">
@@ -62,6 +67,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  /* Logo Header */
+  .hero-logo {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4rem;
+  }
+
+  .logo-img {
+    height: 60px;
+    width: auto;
   }
 
   /* Title with underline */
@@ -158,6 +176,14 @@
   @media (max-width: 768px) {
     .hero-section {
       padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .hero-logo {
+      margin-bottom: 2rem;
+    }
+
+    .logo-img {
+      height: 40px;
     }
 
     .hero-title {
