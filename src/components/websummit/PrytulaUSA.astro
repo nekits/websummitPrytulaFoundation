@@ -1,0 +1,152 @@
+---
+// PrytulaUSA.astro
+---
+
+<section class="usa-section">
+  <div class="container">
+    <h2 class="section-title">PRYTULA<br>FOUNDATION<br>USA</h2>
+    <div class="content">
+      <div class="badge">501(c)(3) NONPROFIT</div>
+
+      <p class="text-block">
+        Prytula Foundation U.S.A. is a recognized <strong>501(c)(3) nonprofit</strong>, established in 2024
+        in Chicago, Illinois. We focus specifically on healthcare and kids projects, as well as humanitarian
+        demining programs.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <div class="stat-value">$5.7M</div>
+          <div class="stat-label">Raised in 2024</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">$5.4M</div>
+          <div class="stat-label">Direct Aid Provided</div>
+        </div>
+      </div>
+
+      <p class="text-block">
+        For full details, please check our Annual Report, Auditors Report and 990 Form on our website.
+      </p>
+
+      <a href="https://prytulafoundation.us" class="usa-link" target="_blank" rel="noopener">
+        Visit prytulafoundation.us →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .usa-section {
+    background: var(--bg-white);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--paragraph-gap);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--bg-blue);
+    color: var(--text-white);
+    font-size: 0.875rem;
+    font-weight: var(--font-bold);
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+
+  .text-block {
+    font-size: var(--text-body-large);
+    line-height: var(--leading-normal);
+  }
+
+  .text-block strong {
+    font-weight: var(--font-bold);
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 3rem;
+    margin: 1.5rem 0;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stat-value {
+    font-size: 2.5rem;
+    font-weight: var(--font-bold);
+    line-height: 1;
+    color: var(--color-blue);
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    margin-top: 0.5rem;
+  }
+
+  .usa-link {
+    display: inline-block;
+    font-size: var(--text-body-large);
+    font-weight: var(--font-bold);
+    color: var(--color-blue);
+    text-decoration: none;
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+
+  .usa-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .usa-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .stats-row {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .stat-value {
+      font-size: 2rem;
+    }
+  }
+</style>

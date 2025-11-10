@@ -1,0 +1,136 @@
+---
+// CoolStories.astro
+---
+
+<section class="stories-section">
+  <div class="container">
+    <h2 class="section-title">COOL<br>STORIES</h2>
+    <div class="content">
+      <div class="story-block">
+        <h3 class="story-title">WE BOUGHT A SATELLITE</h3>
+        <div class="story-meta">SEPTEMBER 2022 • $16M • ICEYE</div>
+        <p class="story-text">
+          In September 2022, the Serhiy Prytula Foundation made history: we purchased full access to an
+          <strong>ICEYE satellite</strong> and its data network for the Ukrainian Armed Forces. This extraordinary
+          achievement was funded by the <strong>$16M</strong> from the "People's Bayraktar" fundraising campaign,
+          when the Turkish manufacturer, Baykar, donated the drones to Ukraine for free.
+        </p>
+        <p class="story-text">
+          The satellite provides critical Synthetic Aperture Radar (SAR) imagery, allowing the military to receive
+          constant, all-weather, day-and-night surveillance of critical enemy locations. This is a game-changer for
+          operational planning and has already proven its worth by helping to destroy russian equipment whose value
+          far exceeded the cost of the contract.
+        </p>
+      </div>
+
+      <div class="story-block">
+        <h3 class="story-title">EUROVISION SONG CONTEST ANNUAL FUNDRAISER</h3>
+        <div class="story-meta">ANNUAL • 2024 • ZMIY</div>
+        <p class="story-text">
+          We proudly leverage the international attention on the Eurovision Song Contest to support Ukraine's vital
+          defense needs. For example, the funds raised during the <strong>2024 National Selection</strong> for
+          Eurovision were dedicated to humanitarian demining efforts.
+        </p>
+        <p class="story-text">
+          This ongoing collaboration helps purchase Ukrainian-made, NATO-certified robotic demining machines like
+          the <strong>"ZMIY."</strong> This initiative effectively uses the global visibility of music to secure
+          practical, life-saving equipment that directly contributes to the safety and future restoration of
+          war-affected territories.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stories-section {
+    background: var(--bg-white);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-gap-large);
+  }
+
+  .story-block {
+    padding-bottom: var(--content-gap);
+    border-bottom: 2px solid var(--bg-gray-light);
+  }
+
+  .story-block:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .story-title {
+    font-size: 1.5rem;
+    font-weight: var(--font-bold);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .story-meta {
+    font-size: 0.875rem;
+    font-weight: var(--font-bold);
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .story-text {
+    font-size: var(--text-body-large);
+    line-height: var(--leading-relaxed);
+    color: var(--text-gray);
+    margin-bottom: var(--paragraph-gap);
+  }
+
+  .story-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .story-text strong {
+    font-weight: var(--font-bold);
+    color: var(--text-black);
+  }
+
+  @media (max-width: 768px) {
+    .stories-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .story-title {
+      font-size: 1.25rem;
+    }
+  }
+</style>

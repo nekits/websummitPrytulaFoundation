@@ -1,0 +1,163 @@
+---
+// HumanAchievements.astro
+---
+
+<section class="achievements-section">
+  <div class="container">
+    <h2 class="section-title">HUMANITARIAN<br>ACHIEVEMENTS<br>OF THE<br>FOUNDATION</h2>
+    <div class="content">
+      <p class="intro-text">
+        We raise funds and distribute them throughout several chosen areas of influence that make the lives of
+        Ukrainians better. We aim to help overcome the challenges the war brought to the everyday lives of people.
+      </p>
+
+      <div class="stat-highlight">
+        <strong>650+ MILLION UAH</strong> raised and counting
+      </div>
+
+      <h3 class="subsection-title">AREAS OF INFLUENCE OF HUMANITARIAN DIVISION:</h3>
+
+      <div class="area-block">
+        <h4 class="area-title">HEALTHCARE</h4>
+        <p class="area-text">
+          200+ medical institutions received equipment and medicines. Delivered 582,755 units of medicines and 528 units
+          of medical equipment. 764 visits by mobile medical teams. 26,229 consultations in the areas of primary and
+          secondary healthcare.
+        </p>
+      </div>
+
+      <div class="area-block">
+        <h4 class="area-title">HUMANITARIAN DEMINING</h4>
+        <p class="area-text">
+          Mechanical demining machine MP-3101, 10 ground robotic cleaning complexes "ZMIY" v 1.21, 26 armored vehicles,
+          559 units of equipment (pickup trucks, drones, metal detectors, blasting machines, protective suits, demining
+          kits, EW, and more).
+        </p>
+      </div>
+
+      <div class="area-block">
+        <h4 class="area-title">SAFE & SMART: BUILDING AND EQUIPPING SHELTERS IN SCHOOLS</h4>
+        <p class="area-text">
+          59 facilities filled with school equipment and appliances. Delivered 642 units of equipment. 1 site finished
+          and 2 are in the process of complete reconstruction of the shelter.
+        </p>
+      </div>
+
+      <div class="area-block">
+        <h4 class="area-title">CRISIS EMERGENCY RESPONSE IN COMMUNITIES</h4>
+        <p class="area-text">
+          7774 equipment items: boats, rescue suits, generators, boilers, pumps, water tanks, heaters, Starlinks for
+          heating points, medications, batteries, EWs, and more. 54 vehicles: 4 trucks, 21 minibuses, 23 SUVs.
+          10 special transport vehicles: 1 type C ambulance, 2 fire trucks, 3 sludge suction trucks, 4 tanker trucks.
+        </p>
+      </div>
+
+      <div class="area-block">
+        <h4 class="area-title">NEST: TEMPORARY MODULAR HOUSING PROJECT</h4>
+        <p class="area-text">
+          48 houses were installed throughout the project. Completed 16 house modifications and improvements.
+          358 units of household appliances have been delivered to those households, as well as 2 ventilation systems installed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .achievements-section {
+    background: var(--bg-gray-light);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-gap);
+  }
+
+  .intro-text {
+    font-size: var(--text-body-large);
+    line-height: var(--leading-normal);
+    margin-bottom: 1rem;
+  }
+
+  .stat-highlight {
+    background: var(--bg-white);
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .subsection-title {
+    font-size: 1.125rem;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .area-block {
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #D5D5D5;
+  }
+
+  .area-block:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .area-title {
+    font-size: 1.125rem;
+    font-weight: var(--font-bold);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .area-text {
+    font-size: var(--text-body);
+    line-height: var(--leading-relaxed);
+    color: var(--text-gray);
+  }
+
+  @media (max-width: 768px) {
+    .achievements-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .stat-highlight {
+      font-size: 1.25rem;
+    }
+  }
+</style>

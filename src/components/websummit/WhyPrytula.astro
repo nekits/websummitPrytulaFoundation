@@ -1,0 +1,120 @@
+---
+// WhyPrytula.astro
+---
+
+<section class="why-section">
+  <div class="container">
+    <h2 class="section-title">WHY THE SERHIY<br>PRYTULA CHARITY<br>FOUNDATION?</h2>
+    <div class="content">
+      <div class="reason-block">
+        <h3 class="reason-title">WE ARE TRANSPARENT</h3>
+        <p class="reason-text">
+          Our reputation is crucial to us. Millions of people entrust us with their continuous donations,
+          thousands of military personnel trust us with their lives. We provide detailed, publicly accessible
+          reports on every procurement, and all donors can track how their contributions are used. Open financial
+          reports for each procurement are available on our official website.
+        </p>
+      </div>
+
+      <div class="reason-block">
+        <h3 class="reason-title">WE ARE EXPERTS</h3>
+        <p class="reason-text">
+          We are one of Ukraine's most trusted, knowledgeable and experienced organizations in the field of
+          military technology and defense support. We possess unmatched expertise in identifying the real needs
+          of the Ukrainian military across all frontlines and sourcing high-quality equipment at the best prices.
+        </p>
+      </div>
+
+      <div class="reason-block">
+        <h3 class="reason-title">WE ARE RELIABLE</h3>
+        <p class="reason-text">
+          The Serhiy Prytula Charity Foundation is one of the biggest and most impactful charitable foundations
+          in Ukraine, dedicated to providing aid to the Defence Forces of Ukraine and civilians affected by
+          russian aggression.
+        </p>
+      </div>
+
+      <div class="reason-block">
+        <h3 class="reason-title">WE ARE EFFECTIVE</h3>
+        <p class="reason-text">
+          We ensure that your charitable contributions are used effectively by maintaining constant communication
+          with military headquarters and local authorities at various levels.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-section {
+    background: var(--bg-white);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-gap);
+  }
+
+  .reason-block {
+    padding-bottom: var(--content-gap);
+    border-bottom: 1px solid #E5E5E5;
+  }
+
+  .reason-block:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .reason-title {
+    font-size: 1.25rem;
+    font-weight: var(--font-bold);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .reason-text {
+    font-size: var(--text-body-large);
+    line-height: var(--leading-relaxed);
+    color: var(--text-gray);
+  }
+
+  @media (max-width: 768px) {
+    .why-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .reason-title {
+      font-size: 1.125rem;
+    }
+  }
+</style>

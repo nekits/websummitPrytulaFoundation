@@ -1,1 +1,75 @@
 @import "tailwindcss";
+
+/* Design System Variables - Based on Desktop.png and Mobile.png */
+:root {
+  /* Brand Colors from Mockup */
+  --color-blue: #0047FF;
+  --color-yellow: #FFD600;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+  /* Background Colors */
+  --bg-white: #FFFFFF;
+  --bg-blue: #0047FF;
+  --bg-yellow: #FFD600;
+  --bg-gray-light: #F5F5F5;
+
+  /* Text Colors */
+  --text-black: #000000;
+  --text-white: #FFFFFF;
+  --text-gray: #666666;
+
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --text-hero: 5rem;              /* 80px - Hero title */
+  --text-section-title: 2.5rem;   /* 40px - Section headings */
+  --text-body: 1rem;              /* 16px - Body text */
+  --text-body-large: 1.125rem;    /* 18px - Larger body */
+  --font-regular: 400;
+  --font-bold: 700;
+  --font-black: 900;
+  --leading-tight: 1.1;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+
+  /* Spacing */
+  --section-padding-y: 6rem;
+  --section-padding-y-mobile: 3rem;
+  --section-padding-x: 2rem;
+  --content-gap: 2rem;
+  --content-gap-large: 3rem;
+  --paragraph-gap: 1rem;
+
+  /* Container */
+  --container-max: 1200px;
+  --container-text: 800px;
+  --container-full: 100%;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--text-black);
+  background: var(--bg-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
