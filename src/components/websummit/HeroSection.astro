@@ -1,0 +1,64 @@
+---
+// HeroSection.astro
+---
+
+<section class="hero-section">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      SAFETY<br>
+      FOR<br>
+      UKRAINIANS
+    </h1>
+    <div class="hero-image">
+      <img
+        src="/images/hero-people.jpg"
+        alt="Group of people supporting Ukraine"
+        class="hero-img"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    background: var(--bg-white);
+    padding: var(--section-padding-y) var(--section-padding-x);
+  }
+
+  .hero-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: var(--text-hero);
+    font-weight: var(--font-black);
+    color: var(--text-black);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%); /* Black & white effect */
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .hero-title {
+      font-size: 3rem; /* 48px on mobile */
+    }
+  }
+</style>

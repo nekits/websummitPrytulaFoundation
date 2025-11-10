@@ -1,0 +1,114 @@
+---
+// AboutPrytulaFoundation.astro
+---
+
+<section class="yellow-section">
+  <div class="container">
+    <h2 class="section-title">ABOUT PRYTULA<br>CHARITY<br>FOUNDATION</h2>
+    <div class="content">
+      <div class="subsection">
+        <h3 class="subsection-title">ABOUT SERHIY PRYTULA</h3>
+        <p class="text-block">
+          Serhiy Prytula is a Ukrainian volunteer and founder of the Serhiy Prytula Charity Foundation,
+          as well as a former leading host of one of Ukraine's most popular TV shows. Since 2014, he has
+          been actively involved in humanitarian initiatives, and after Russia's full-scale invasion in 2022,
+          he expanded his efforts with a team of over 100 people to provide aid to both the military and civilians.
+        </p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">ABOUT UKRAINIAN HUB</h3>
+        <p class="text-block">
+          Ukrainian Hub is an international non-profit organization with offices in Ukraine, Portugal,
+          and the United States. We empower Ukrainian entrepreneurs and displaced professionals through
+          business education, mentoring, and global networking. Our mission is to support the Ukrainian
+          community worldwide and foster innovation and entrepreneurship.
+        </p>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subsection-title">ONE BILLION FUNDRAISER</h3>
+        <p class="text-block">
+          Together, we can prevent mass russian strikes on Ukrainian cities. Our One Billion campaign aims
+          to raise critical funds for advanced air defense systems, drones, and military equipment that will
+          protect Ukrainian civilians and critical infrastructure from ongoing attacks.
+        </p>
+        <p class="text-block">
+          Every contribution brings us closer to securing the safety of millions of Ukrainians. The funds
+          raised will be allocated to the most urgent defense needs, identified in collaboration with
+          Ukrainian military leadership and defense experts.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .yellow-section {
+    background: var(--bg-yellow);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-gap);
+  }
+
+  .subsection {
+    margin-bottom: var(--content-gap);
+  }
+
+  .subsection:last-child {
+    margin-bottom: 0;
+  }
+
+  .subsection-title {
+    font-size: 1.125rem;
+    font-weight: var(--font-bold);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  .text-block {
+    font-size: var(--text-body-large);
+    line-height: var(--leading-normal);
+  }
+
+  .text-block + .text-block {
+    margin-top: var(--paragraph-gap);
+  }
+
+  @media (max-width: 768px) {
+    .yellow-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+</style>

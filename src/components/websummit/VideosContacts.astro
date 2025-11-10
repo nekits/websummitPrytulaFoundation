@@ -1,0 +1,189 @@
+---
+// VideosContacts.astro
+---
+
+<section class="videos-section">
+  <div class="container">
+    <h2 class="section-title">VIDEOS</h2>
+    <div class="content">
+      <div class="videos-grid">
+        <div class="video-placeholder">
+          <div class="placeholder-text">Serhiy's interview for BBC</div>
+          <div class="placeholder-note">Video will be added soon</div>
+        </div>
+
+        <div class="video-placeholder">
+          <div class="placeholder-text">Shahed strike impact footage</div>
+          <div class="placeholder-note">Video will be added soon</div>
+        </div>
+
+        <div class="video-placeholder">
+          <div class="placeholder-text">Humanitarian projects overview</div>
+          <div class="placeholder-note">Video will be added soon</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts-section">
+  <div class="container">
+    <h2 class="section-title">CONTACTS</h2>
+    <div class="content">
+      <div class="contact-item">
+        <div class="contact-label">WEBSITE</div>
+        <a href="https://prytulafoundation.org/en" class="contact-link" target="_blank" rel="noopener">
+          prytulafoundation.org/en
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">EMAIL</div>
+        <a href="mailto:m.radynska@prytulafoundation.org" class="contact-link">
+          m.radynska@prytulafoundation.org
+        </a>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label">PHONE</div>
+        <a href="tel:+380673433090" class="contact-link">
+          +380 67 343 3090
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Videos Section */
+  .videos-section {
+    background: var(--bg-white);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .videos-section .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--paragraph-gap);
+  }
+
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .video-placeholder {
+    aspect-ratio: 16 / 9;
+    background: var(--bg-gray-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: 2px solid #E5E5E5;
+  }
+
+  .placeholder-text {
+    font-size: var(--text-body);
+    font-weight: var(--font-bold);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .placeholder-note {
+    font-size: 0.875rem;
+    color: var(--text-gray);
+    text-align: center;
+  }
+
+  /* Contacts Section */
+  .contacts-section {
+    background: var(--bg-gray-light);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-black);
+  }
+
+  .contacts-section .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contacts-section .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-gap);
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-label {
+    font-size: 0.875rem;
+    font-weight: var(--font-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-gray);
+  }
+
+  .contact-link {
+    font-size: var(--text-body-large);
+    font-weight: var(--font-bold);
+    color: var(--text-black);
+    text-decoration: none;
+  }
+
+  .contact-link:hover {
+    color: var(--color-blue);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .videos-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .contacts-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .videos-section .container,
+    .contacts-section .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .videos-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

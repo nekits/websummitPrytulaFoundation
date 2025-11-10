@@ -1,0 +1,86 @@
+---
+// AboutFoundation.astro
+---
+
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title">ABOUT THE<br>FOUNDATION</h2>
+    <div class="content">
+      <p class="text-block">
+        Serhiy Prytula Charity Foundation is one of the largest charitable foundations in Ukraine.
+        Since 2014, it has been providing assistance to Ukraine's Defense Forces and civilians
+        affected by Russian aggression.
+      </p>
+      <p class="text-block highlight">
+        We are the people's foundation, powered by donations.
+      </p>
+      <p class="text-block">
+        During the full scale invasion, we've raised <strong>300 millions EUR</strong> and counting.
+      </p>
+      <p class="text-block">
+        Our mission is to protect Ukrainian and European security through the supply of modern
+        technologies and the implementation of effective solutions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background: var(--bg-blue);
+    padding: var(--section-padding-y) var(--section-padding-x);
+    color: var(--text-white);
+  }
+
+  .container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .section-title {
+    font-size: var(--text-section-title);
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--paragraph-gap);
+  }
+
+  .text-block {
+    font-size: var(--text-body-large);
+    line-height: var(--leading-normal);
+  }
+
+  .text-block.highlight {
+    font-weight: var(--font-bold);
+    font-size: 1.25rem;
+  }
+
+  .text-block strong {
+    font-weight: var(--font-bold);
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+  }
+</style>
