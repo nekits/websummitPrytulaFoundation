@@ -1,14 +1,44 @@
 ---
-// HeroSection.astro
+// HeroSection.astro - Updated to match Figma section-top design
 ---
 
 <section class="hero-section">
   <div class="hero-container">
-    <h1 class="hero-title">
-      SAFETY<br>
-      FOR<br>
-      UKRAINIANS
-    </h1>
+    <!-- Title with decorative underline -->
+    <div class="hero-title-wrapper">
+      <h1 class="hero-title">
+        SAFETY<br>
+        FOR<br>
+        UKRAINIANS
+      </h1>
+      <div class="hero-underline">
+        <img src="/vectors/yellow-underline.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      one donation can help
+    </p>
+
+    <!-- Donation Buttons -->
+    <div class="hero-buttons">
+      <a href="https://buy.stripe.com/00w14ofoG4iKfn65MRao804"
+         class="btn btn-stripe"
+         target="_blank"
+         rel="noopener noreferrer">
+        stripe
+      </a>
+      <span class="btn-divider">|</span>
+      <a href="https://send.monobank.ua/jar/SvfRBKf7a"
+         class="btn btn-mono"
+         target="_blank"
+         rel="noopener noreferrer">
+        mono
+      </a>
+    </div>
+
+    <!-- Background Image -->
     <div class="hero-image">
       <img
         src="/images/hero-people.jpg"
@@ -23,38 +53,140 @@
   .hero-section {
     background: var(--bg-white);
     padding: var(--section-padding-y) var(--section-padding-x);
+    position: relative;
   }
 
   .hero-container {
     max-width: var(--container-max);
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Title with underline */
+  .hero-title-wrapper {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
   .hero-title {
     font-size: var(--text-hero);
     font-weight: var(--font-black);
     color: var(--text-black);
-    line-height: var(--leading-hero);
-    letter-spacing: var(--tracking-hero);
-    margin-bottom: 2rem;
+    line-height: 0.78125;
+    letter-spacing: -0.04em;
     text-transform: uppercase;
+    text-align: center;
+    margin: 0;
   }
 
+  .hero-underline {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 900px;
+    pointer-events: none;
+  }
+
+  .hero-underline img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Subtitle */
+  .hero-subtitle {
+    font-size: 2.875rem;
+    font-weight: var(--font-regular);
+    color: var(--text-black);
+    line-height: 110px;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 0 0 1.5rem 0;
+  }
+
+  /* Donation Buttons */
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    font-size: 1.1875rem;
+    font-weight: var(--font-bold);
+    color: var(--text-black);
+    text-decoration: none;
+    text-transform: lowercase;
+    transition: opacity 0.2s ease;
+    padding: 0.5rem 1rem;
+  }
+
+  .btn:hover {
+    opacity: 0.7;
+  }
+
+  .btn-divider {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-black);
+    line-height: 1;
+  }
+
+  /* Background Image */
   .hero-image {
     width: 100%;
+    max-width: var(--container-content);
     margin-top: 2rem;
+    border-radius: var(--radius-lg, 33px);
+    overflow: hidden;
   }
 
   .hero-img {
     width: 100%;
     height: auto;
     display: block;
-    filter: grayscale(100%); /* Black & white effect */
+    filter: grayscale(100%);
   }
 
+  /* Responsive */
   @media (max-width: 768px) {
     .hero-section {
       padding: var(--section-padding-y-mobile) var(--section-padding-x);
+    }
+
+    .hero-title {
+      font-size: 3.75rem;
+      line-height: 0.9;
+    }
+
+    .hero-subtitle {
+      font-size: 1.75rem;
+      line-height: 1.3;
+    }
+
+    .hero-underline {
+      bottom: -15px;
+      max-width: 100%;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .btn-divider {
+      display: none;
+    }
+
+    .btn {
+      font-size: 1.125rem;
     }
   }
 </style>
