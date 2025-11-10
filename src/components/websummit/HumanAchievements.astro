@@ -3,7 +3,7 @@
 ---
 
 <section class="achievements-section">
-  <div class="container">
+  <div class="two-column-container">
     <h2 class="section-title">HUMANITARIAN<br>ACHIEVEMENTS<br>OF THE<br>FOUNDATION</h2>
     <div class="content">
       <p class="intro-text">
@@ -70,14 +70,6 @@
     color: var(--text-black);
   }
 
-  .container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-    align-items: start;
-  }
 
   .section-title {
     font-size: var(--text-section-lg);
@@ -152,11 +144,6 @@
   @media (max-width: 768px) {
     .achievements-section {
       padding: var(--section-padding-y-mobile) var(--section-padding-x);
-    }
-
-    .container {
-      grid-template-columns: 1fr;
-      gap: 2rem;
     }
   }
 </style>

@@ -100,6 +100,11 @@
   --radius-lg: 33px;                /* Large radius from Figma */
   --radius-md: 20px;                /* Medium radius */
   --radius-sm: 10px;                /* Small radius */
+
+  /* Two-Column Layout */
+  --grid-columns-desktop: 1fr 2fr;  /* Unified column ratio */
+  --grid-gap-desktop: 4rem;         /* 64px gap between columns */
+  --grid-gap-mobile: 2rem;          /* 32px gap on mobile */
 }
 
 /* Mobile Typography Adjustments */
@@ -145,4 +150,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* Unified Two-Column Layout */
+.two-column-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--grid-columns-desktop);
+  gap: var(--grid-gap-desktop);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .two-column-container {
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap-mobile);
+  }
 }
